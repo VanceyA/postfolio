@@ -32,23 +32,6 @@ const upload = multer({
 const singleUpload = upload.single('image');
 
 class API {
-
-    // static async testHello(req, res) {
-    //     res.status(200).send("Hello world!");
-    // }
-    
-    // fetch all posts
-    // static async fetchAllPosts(req, res) {
-    //     try {
-    //         const posts = await model.Post.find();
-    //         res.status(200).json(posts);
-    //     } catch (err) {
-    //         // res.status(404).json({message: err.message});
-    //         res.status(500);
-
-    //     }
-    // }
-
     // fetch up to number requested by client
     static async fetchSomePosts(req, res) {
         const page = parseInt(req.query.page) || 1;
